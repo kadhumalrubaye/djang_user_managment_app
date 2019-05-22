@@ -1,0 +1,23 @@
+{% extends "baseTempl.html" %}
+{% block content %}
+
+
+
+{% for degree in degree %}
+    <h5 class="h5">degrees of student {{ degree.student_id}}</h5>
+
+<label class="h1">{{ degree.student_degree}}</label>
+
+    <br>
+{% endfor %}
+
+<h2 class="label">add dgree to students </h2>
+
+<form action="" method="post">
+
+    {% csrf_token %}
+    {{ dgreeForm.as_p }}
+    <button class="btn-primary" type="submit"> save</button>
+
+</form>
+ {%endblock %}

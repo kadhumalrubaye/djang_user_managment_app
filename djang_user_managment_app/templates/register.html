@@ -1,0 +1,12 @@
+{% extends "baseTempl.html" %}
+{% block content %}
+
+<form action="" method="post">
+   <h1>Registeration form for New User</h1>
+    {{ msg }}
+    {% csrf_token %}
+    {{ fromResgester.as_p }}
+    <button class="btn-primary" type="submit"> save</button>
+
+</form>
+{% endblock %}

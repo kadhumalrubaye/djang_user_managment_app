@@ -1,0 +1,11 @@
+{% extends "baseTempl.html" %}
+{% block content %}
+{% for student in students %}
+<a href='{{student.id }}/degree'>{{ student.first_name }}</a>
+    <br>
+{% endfor %}
+{% endblock %}
+
+
+
+
